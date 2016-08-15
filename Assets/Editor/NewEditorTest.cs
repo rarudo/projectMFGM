@@ -29,4 +29,17 @@ public class NewEditorTest {
         GameObject go = tes.makeBullet();
         Assert.AreEqual("Bullet",go.name,"Bulletって言うオブジェクトが生成されてるはず");
     }
+
+    [Test]
+    public void 作った弾丸オブジェクトがPlayerから出力されているか座標チェック() {
+        CameraController tes = new CameraController();
+        GameObject gObject = tes.makeBullet();
+        float x = gObject.transform.position.x;
+        float y = gObject.transform.position.y;
+        float z = gObject.transform.position.z;
+
+        Assert.AreNotEqual(0,x,"Playerxから玉が発射されるのでx座標が0でなければOK");
+        Assert.AreNotEqual(0,y,"Playerxから玉が発射されるのでy座標が0でなければOK");
+        Assert.AreNotEqual(0,z,"Playerxから玉が発射されるのでz座標が0でなければOK");
+    }
 }
