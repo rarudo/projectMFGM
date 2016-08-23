@@ -44,10 +44,9 @@ public class NewEditorTest {
     }
 
     [Test]
-    public void FirstPersonCharacterを取得する() {
+    public void spawnを取得する() {
         CameraController tes = new CameraController();
-        GameObject go = tes.getCameraObject();
-        Assert.AreNotEqual(go, null, "カメラオブジェクトがNULL出ないことを確認");
-
+        GameObject go = tes.getSpawnObject();
+        Assert.AreNotEqual(go, null, "spawnオブジェクトがNULLじゃないことを確認");
     }
 }

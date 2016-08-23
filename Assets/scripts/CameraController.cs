@@ -5,11 +5,21 @@ public class CameraController : MonoBehaviour {
     public string prefabFolder_ = "Prefabs";
     public string prefabName_ = "BulletBase";
     private GameObject player;
-    private GameObject camera;
+    private GameObject spawn;
+
+    //test用
+    public CameraController(){
+        init();
+    }
+
 	// Use this for initialization
 	void Start () {
+        init();
+    }
+
+    private void init(){
         //各種オブジェクトの取得
-        this.camera = GameObject.Find("");
+        this.spawn= GameObject.Find("Spawn");
         this.player = GameObject.FindGameObjectWithTag("Player");
     }
 
@@ -32,24 +42,33 @@ public class CameraController : MonoBehaviour {
 
     //オブジェクトを出現させる座標をPlayerの座標にする
     public GameObject setLocationPlayer(GameObject gObject) {
-        Vector3 playerPosition = player.transform.position;
-        gObject.transform.position = playerPosition + player.transform.forward;
+        Vector3 spawnPosition = spawn.transform.position;
+        gObject.transform.position = spawnPosition + player.transform.forward;
         return gObject;
     }
 
-    public GameObject getCameraObject(){
-        return this.camera;
+    public GameObject getSpawnObject(){
+        return this.spawn;
+    }
+    public GameObject getPlayerObject(){
+        return this.player;
     }
 
     public GameObject setAcceleration(GameObject gObject){
         //rigitBodyの取得 
         Rigidbody rb = gObject.GetComponent<Rigidbody>();
-        //playerの向いてる方向をrotationから取得する
-        Quaternion playerRotation = player.transform.rotation;
-        //playerの向いてる方向をvector3に変換する
-        Vector3 playerForward = player.transform.forward;
-        //加速度を与える
+        //        //playerの向いてる方向をrotationから取得する
+        //        Quaternion playerRotation = player.transform.rotation;
+        //        //playerの向いてる方向をvector3に変換する
+        //        Vector3 playerForward = player.transform.forward;
+        //        //加速度を与える
+        float cameraRoutation = spawn.transform.rotation.x;
+        Vector3 playerForward = spawn.transform.forward;
         rb.AddForce(playerForward*10, ForceMode.Impulse);
         return gObject;
     }
+}
+
+internal class Vectro3
+{
 }
