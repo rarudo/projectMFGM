@@ -42,4 +42,12 @@ public class NewEditorTest {
         Assert.AreNotEqual(0,y,"Playerxから玉が発射されるのでy座標が0でなければOK");
         Assert.AreNotEqual(0,z,"Playerxから玉が発射されるのでz座標が0でなければOK");
     }
+
+    [Test]
+    public void FirstPersonCharacterを取得する() {
+        CameraController tes = new CameraController();
+        GameObject go = tes.getCameraObject();
+        Assert.AreNotEqual(go, null, "カメラオブジェクトがNULL出ないことを確認");
+
+    }
 }
