@@ -49,7 +49,6 @@ public class NewEditorTest {
         Assert.AreNotEqual(go, null, "spawnオブジェクトがNULLじゃないことを確認");
     }
 
-	[Test]
 	public void 的となるオブジェクトをプレハブから読み込む(){
 		TargetController tes = new TargetController();
 		GameObject gObject = tes.makeTarget();
