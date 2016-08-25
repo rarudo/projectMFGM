@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TargetController : MonoBehaviour {
+public class TargetSpawnController : MonoBehaviour {
     public string prefabFolder_ = "Prefabs";
     public string prefabName_ = "TargetBase";
 	// Use this for initialization

@@ -193,7 +193,7 @@ GameObject:
   - 136: {fileID: 718865979}
   - 23: {fileID: 718865978}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -500,7 +500,7 @@ GameObject:
   - 135: {fileID: 1886558779}
   - 23: {fileID: 1886558778}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,7 +626,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2078062347}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc4b69393324824f852160036062c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabFolder_: 50726566616273
+  prefabName_: 54617267657442617365
+--- !u!114 &2078062349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078062347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 431041167482b134496ee295e1e401b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabName: 42756c6c657442617365
+  prefabFolder_: 50726566616273
+  prefabName_: 42756c6c657442617365
+  player: {fileID: 0}
+  spawn: {fileID: 0}
